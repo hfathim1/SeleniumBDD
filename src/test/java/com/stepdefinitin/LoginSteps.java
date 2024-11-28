@@ -42,9 +42,22 @@ public class LoginSteps extends BaseTest {
     public void i_should_be_redirected_to_the_home_page() {
         // Implement a check to verify redirection
     }
-
-    @After
-    public void tearDown() {
-        super.tearDown();
+    
+    
+    @Given("I am navigate to {string}")
+    public void i_am_navigate_to(String url) {
+      driver.get(url);
     }
+
+
+    @When("I select value {string} from dropdown")
+    public void selectValue(String value) {
+    	loginPage.selectValue(value);
+    }
+
+
+//    @After
+//    public void tearDown() {
+//        super.tearDown();
+//    }
 }

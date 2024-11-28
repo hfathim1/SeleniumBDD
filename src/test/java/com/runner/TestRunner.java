@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
         features = "src/test/resources/Features",
         glue = "com.stepdefinitin",
         plugin = {"pretty", "html:target/cucumber-reports"},
-        monochrome = true
+        monochrome = true, tags = "@drodown"
 )
 public class TestRunner {
 }
